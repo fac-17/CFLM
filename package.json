@@ -1,0 +1,26 @@
+{
+  "name": "cflm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-17/CFLM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-17/CFLM/issues"
+  },
+  "homepage": "https://github.com/fac-17/CFLM#readme",
+  "dev-dependencies": {
+    "supertest": "^4.0.2",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
