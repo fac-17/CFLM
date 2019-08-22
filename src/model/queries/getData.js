@@ -16,4 +16,12 @@ const getAnimals = cb => {
   });
 };
 
-module.exports = { getUsers, getAnimals };
+const createUser = (userName, cb) => {
+dbConnection.query("INSERT INTO users(name) VALUES ($1)", [userName], (err, res) => {
+if (err) {
+cb(err);
+} else cb(null, res.rows);
+});
+};
+
+module.exports = { getUsers, getAnimals, createUser};
