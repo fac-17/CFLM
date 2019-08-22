@@ -1,9 +1,5 @@
-# CFLM
-
 ## Project
 Build a server-rendered full-stack app
-
-![](https://media.giphy.com/media/65ODCwM00NVmEyLsX3/giphy.gif)
 
 - [ ] Build an app using the Express framework.
 - [x] Use a PostgreSQL database to store and retrieve your data.
@@ -68,6 +64,30 @@ What's also important:
 - We whiteboarded this together using an example from FAC16 and one of the workshops as support which meant we learnt exactly what each directory should include, what the files would do and how to ride our bike with handlebars.
 - We spend time understanding the app.js file and particularly what the app.set, app.engine and app.use are for. We did console log a lot and find out there were a big objects and we found out that basically we kind of give instruction to express,so it will know where look for files 
 
+
+
+---
+
+creating a test database: 
+
+```
+sudo -u postgres createdb testanimalsdb
+```
+```
+pgcli testanimalsdb
+```
+```
+CREATE USER oldmcdonald SUPERUSER PASSWORD 'dragon'
+```
+```
+GRANT ALL PRIVILEGES ON DATABASE testanimalsdb to oldmcdonald
+```
+
+Then add to env:
+
+TEST_DB_URL = postgres://mcdonald:dragon@localhost:5432/testanimalsdb
+
+---
 
 ## Animal svgs
 
