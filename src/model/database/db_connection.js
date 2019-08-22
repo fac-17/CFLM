@@ -1,10 +1,13 @@
 const { Pool } = require("pg");
 const url = require("url");
-require("env2")("./config.env");
+require("env2")("./.env");
 
 let DB_URL = process.env.DB_URL;
 
+console.log(process.env);
+
 if (process.env.NODE_env === "test") {
+  console.log("Testing");
   DB_URL = process.env.TEST_DB_URL;
 }
 

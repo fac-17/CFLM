@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test tape tests/*.test.js | tap-spec",
+    "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
     "start": "node src/index.js"
   },
   "repository": {
@@ -22,7 +22,9 @@
     "tape": "^4.11.0"
   },
   "dependencies": {
+    "env2": "^2.2.2",
     "express": "^4.17.1",
+    "pg": "^7.12.1",
     "tap-spec": "^5.0.0"
   }
 }
