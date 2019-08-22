@@ -17,10 +17,25 @@ test("Check getUsers function", t => {
     { name: "Jack" }
   ];
   runDbBuild((err, res) => {
-    t.error(err, "No error");
+    t.error(err, "No error for DbBuild");
     queries.getData.getUsers((err, data) => {
+      t.error(err, "No error for getUsers");
       t.deepEqual(users, data, "Correct names are returned");
+      t.end();
     });
-    t.end();
+  });
+});
+
+test("Check getAnimals function", t => {
+  const animals = [{ name: 1 }];
+
+  runDbBuild((err, res) => {
+    t.error(err, "No error for DbBuild");
+    queries.getData.getAnimals((err, data) => {
+      t.error(err, "No error for getAnimals");
+      console.log(data);
+      t.deepEqual(animals, data, "Correct animals are returned");
+      t.end();
+    });
   });
 });
