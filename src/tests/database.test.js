@@ -43,3 +43,16 @@ test("Check getAnimals function", t => {
     });
   });
 });
+
+test("Check return all adopted relationships", t => {
+  const adoptions = "tbd";
+
+  runDbBuild((err, res) => {
+    t.error(err, "No error for DbBuild");
+    queries.getData.getAdoptions((err, data) => {
+      t.error(err, "No error for getAdoptions");
+      t.deepEqual(adoptions, data, "Correct adoptions are returned");
+      t.end();
+    });
+  });
+});
