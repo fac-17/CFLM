@@ -22,6 +22,7 @@
     "tape": "^4.11.0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "tap-spec": "^5.0.0"
   }
 }
