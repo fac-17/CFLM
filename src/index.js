@@ -1,6 +1,6 @@
 const app = require('./app');
-const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log('App is running on port', port)
+// We use app.get('port') which is set in app.js
+app.listen(app.get('port'), () => {
+  console.log('App is running on port', app.get('port'))
 });
