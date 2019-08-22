@@ -8,3 +8,19 @@ test("Check table builds", t => {
     t.end();
   });
 });
+
+test("Check getUsers function", t => {
+  const users = [
+    { name: "Gregor" },
+    { name: "Andy" },
+    { name: "Francesca" },
+    { name: "Jack" }
+  ];
+  runDbBuild((err, res) => {
+    t.error(err, "No error");
+    queries.getData.getUsers((err, data) => {
+      t.deepEqual(users, data, "Correct names are returned");
+    });
+    t.end();
+  });
+});
