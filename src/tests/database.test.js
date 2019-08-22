@@ -27,13 +27,17 @@ test("Check getUsers function", t => {
 });
 
 test("Check getAnimals function", t => {
-  const animals = [{ name: 1 }];
+  const animals = [
+    { name: "Pig" },
+    { name: "Goat" },
+    { name: "Tiger" },
+    { name: "Monkey" }
+  ];
 
   runDbBuild((err, res) => {
     t.error(err, "No error for DbBuild");
     queries.getData.getAnimals((err, data) => {
       t.error(err, "No error for getAnimals");
-      console.log(data);
       t.deepEqual(animals, data, "Correct animals are returned");
       t.end();
     });

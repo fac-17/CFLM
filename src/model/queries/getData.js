@@ -8,6 +8,12 @@ const getUsers = cb => {
   });
 };
 
-const getAnimals = cb => {};
+const getAnimals = cb => {
+  dbConnection.query("SELECT name FROM animals ORDER BY id", (err, res) => {
+    if (err) {
+      cb(err);
+    } else cb(null, res.rows);
+  });
+};
 
 module.exports = { getUsers, getAnimals };
