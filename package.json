@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
     "start": "node src/index.js"
   },
   "repository": {
@@ -16,7 +17,7 @@
     "url": "https://github.com/fac-17/CFLM/issues"
   },
   "homepage": "https://github.com/fac-17/CFLM#readme",
-  "dev-dependencies": {
+  "devDependencies": {
     "supertest": "^4.0.2",
     "tape": "^4.11.0"
   },
@@ -25,5 +26,8 @@
   },
   "devDependencies": {
     "express-handlebars": "^3.1.0"
+    "env2": "^2.2.2",
+    "pg": "^7.12.1",
+    "tap-spec": "^5.0.0"
   }
 }

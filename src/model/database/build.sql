@@ -26,5 +26,7 @@ VALUES ('Gregor'), ('Andy'), ('Francesca'), ('Jack');
 INSERT INTO animals (name) 
 VALUES ('Pig'), ('Goat'), ('Tiger'), ('Monkey');
 
-INSERT INTO adoption (name) 
+INSERT INTO adoption (user_id, animal_id) 
 VALUES (1,2), (2,1), (2,4), (3,3), (3,1), (4,1);
+
+COMMIT;
