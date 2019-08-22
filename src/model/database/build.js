@@ -8,4 +8,6 @@ const runDbBuild = cb => {
   dbConnection.query(sql, cb);
 };
 
+runDbBuild();
+
 module.exports = runDbBuild;
