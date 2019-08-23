@@ -2,5 +2,10 @@ const animals = require('../model/animallist')
      
 ;
 exports.get = (req, res) => {
-    res.render('adopt', { activePage: { animals: true }, animals });
+    console.log({animals});
+    animals((err,result)=>{
+        console.log({err},{result})
+        res.render('adopt', { activePage: { animals: true }, animals:result});
+
+    })
 };
