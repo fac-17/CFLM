@@ -24,7 +24,7 @@ INSERT INTO users (name)
 VALUES ('Gregor'), ('Andy'), ('Francesca'), ('Jack');
 
 INSERT INTO animals (name) 
-VALUES ('elephant'), ('octopus'), ('seal'), ('hippopotamus'), ('monkey'), ('bison'), ('hamster'), ('llama'), ('panther'), ('platypus'), ('tortoise'), ('jellyfish');
+VALUES ('elephant'), ('octopus'), ('seal'), ('hippo'), ('monkey'), ('bison'), ('hamster'), ('llama'), ('panther'), ('platypus'), ('tortoise'), ('jellyfish');
 
 
 INSERT INTO adoption (user_id, animal_id) 
