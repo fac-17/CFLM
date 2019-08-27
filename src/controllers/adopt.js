@@ -1,4 +1,7 @@
-const animals = require("../model/animallist");
+//link between database and adoption
+const animalRequest = require("../model/queries/getData");
+
+const animals = animalRequest.getAnimals;
 
 exports.get = (req, res) => {
   console.log({ animals });
