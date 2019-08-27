@@ -1,0 +1,18 @@
+.adoptAnimals__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adoptAnimals__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1vw;
+  border: 0.1em dashed black;
+  margin: 0.1em;
+}
+
+.adoptAnimals__image {
+  width: 15vw;
+  height: auto;
+}
