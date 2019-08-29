@@ -1,20 +1,21 @@
 <body>
 
-    <h1>do you want to aaaaaaaaaaadopt??
+    <h1 class="adoptAnimals__title">Animals Available for Adoption
 
     </h1>
 
-
-    <ul class="animals_list">
-
+    <section class="adoptAnimals__list">
         {{#each animals}}
-        <li class="animal_item">
 
-            <div class="svg_animal">
+        <article class="adoptAnimals__item">
+            <h3 class="adoptAnimals__name">
                 {{this.name}}
-                <img src="/assets/{{this.name}}.svg">
-            </div>
-            {{/each}}
-        </li>
-    </ul>
+
+            </h3>
+
+            <img src="/assets/{{this.name}}.svg" alt={{this.name}} class="adoptAnimals__image">
+        </article>
+        {{/each}}
+    </section>
+
 </body>
