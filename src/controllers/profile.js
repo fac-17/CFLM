@@ -7,7 +7,8 @@ exports.get = (req, res) => {
   getAdoptions(username, (err, result) => {
     res.render("profile", {
       activePage: { profile: true },
-      animals: result
+      animals: result,
+      username: username
     });
   });
 };
